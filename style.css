@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #f4f4f4;
+}
+
+/* Hero section */
+.hero {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+  background: white;
+  text-align: center;
+  padding: 15px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* About section */
+.about {
+  padding: 40px 20px;
+  text-align: center;
+  background: white;
+}
+
+.about h2 {
+  font-size: 32px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+  color: white;
+}
