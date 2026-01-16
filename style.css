@@ -7,10 +7,37 @@ body {
 
 /* Hero section */
 .hero {
-  background: black;
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 120px 20px;
+}
+
+/* dark overlay so text is readable */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero {
+  position: relative;
+}
+
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 1;
+}
+
 }
 
 .hero h1 {
