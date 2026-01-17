@@ -1,4 +1,4 @@
-/* ================= GENERAL ================= */
+ /* ================= GENERAL ================= */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -21,7 +21,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.45); /* dark overlay */
   z-index: 0;
 }
 
@@ -144,36 +144,135 @@ nav a {
   margin-bottom: 15px;
 }
 
-/* ================= CONTACT BACKGROUND ================= */
+/* ================= CONTACT ================= */
+.contact {
+  background: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.contact-list li {
+  padding: 10px 0;
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.contact-list li:last-child {
+  border-bottom: none;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+  color: white;
+}
+
+/* ================= AOS DEFAULTS ================= */
+/* Optional: smooth fade and spacing */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+/* Extra spacing for sections when appearing */
+.about[data-aos],
+.gallery[data-aos],
+.price-sheet .sheet[data-aos],
+.contact[data-aos] {
+  transform: translateY(20px);
+}
+
+[data-aos].aos-animate {
+  transform: translateY(0);
+}
+
+.kontakt {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.kontakt h2 {
+  text-align: center;
+}
+
+.kontakt label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.kontakt input,
+.kontakt textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+.kontakt button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+}
+
+/* Bakgrunn med hero2 */
 .kontakt-wrapper {
   min-height: 100vh;
   background-image: url("images/hero4.JPG");
   background-size: cover;
   background-position: center;
-  padding: 60px 15px;
+  padding: 40px 15px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-/* ================= CONTACT SHEET (A4) ================= */
+/* Hvitt A4-ark */
 .kontakt-ark {
   background: white;
   width: 100%;
-  max-width: 800px;
+  max-width: 800px; /* A4-følelse */
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  font-family: Arial, sans-serif;
 }
 
-/* Title */
+/* Tittel */
 .kontakt-ark h2 {
   text-align: center;
   margin-bottom: 30px;
-  font-size: 32px;
 }
 
-/* Form */
+/* Skjema */
 .kontakt-ark label {
   display: block;
   margin-top: 20px;
@@ -190,7 +289,7 @@ nav a {
   font-size: 15px;
 }
 
-/* Button */
+/* Knapp */
 .kontakt-ark button {
   margin-top: 30px;
   width: 100%;
@@ -207,28 +306,32 @@ nav a {
   background-color: #333;
 }
 
-/* ================= FOOTER ================= */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: black;
-  color: white;
+/* Fade + slide inn */
+@keyframes arkFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* ================= AOS DEFAULTS ================= */
-[data-aos] {
+/* Bruk animasjonen */
+.kontakt-ark {
+  animation: arkFadeUp 0.9s ease-out forwards;
+}
+
+.kontakt-ark label,
+.kontakt-ark input,
+.kontakt-ark textarea,
+.kontakt-ark button {
+  animation: arkFadeUp 0.9s ease-out forwards;
   opacity: 0;
-  transition-property: transform, opacity;
 }
 
-[data-aos].aos-animate {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.about[data-aos],
-.gallery[data-aos],
-.price-sheet .sheet[data-aos],
-.kontakt-ark[data-aos] {
-  transform: translateY(30px);
-}
+.kontakt-ark label { animation-delay: 0.1s; }
+.kontakt-ark input { animation-delay: 0.2s; }
+.kontakt-ark textarea { animation-delay: 0.3s; }
+.kontakt-ark button { animation-delay: 0.4s; }
