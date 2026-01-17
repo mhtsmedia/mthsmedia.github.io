@@ -242,3 +242,66 @@ footer {
   color: white;
   font-size: 16px;
 }
+
+/* Bakgrunn med hero2 */
+.kontakt-wrapper {
+  min-height: 100vh;
+  background-image: url("hero2.JPG");
+  background-size: cover;
+  background-position: center;
+  padding: 40px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Hvitt A4-ark */
+.kontakt-ark {
+  background: white;
+  width: 100%;
+  max-width: 800px; /* A4-følelse */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  font-family: Arial, sans-serif;
+}
+
+/* Tittel */
+.kontakt-ark h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Skjema */
+.kontakt-ark label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.kontakt-ark input,
+.kontakt-ark textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* Knapp */
+.kontakt-ark button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #111;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.kontakt-ark button:hover {
+  background-color: #333;
+}
