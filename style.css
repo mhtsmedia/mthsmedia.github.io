@@ -203,3 +203,42 @@ footer {
 [data-aos].aos-animate {
   transform: translateY(0);
 }
+
+.kontakt {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.kontakt h2 {
+  text-align: center;
+}
+
+.kontakt label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.kontakt input,
+.kontakt textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+.kontakt button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+}
