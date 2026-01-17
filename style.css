@@ -1,11 +1,4 @@
-<body>
-
-<!-- 1️⃣ Top Hero -->
-<header class="hero" style="background-image: url('images/hero.PNG');">
-  <h1>MTHS Media</h1>
-  <p>Fotografering & Digital Markedsføring</p>
-</header>
-
+/* ================= GENERAL ================= */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -29,6 +22,7 @@ body {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.45); /* dark overlay */
+  z-index: 0;
 }
 
 .hero h1,
@@ -65,6 +59,7 @@ nav a {
 
 .about h2 {
   font-size: 32px;
+  margin-bottom: 20px;
 }
 
 .about p {
@@ -89,6 +84,7 @@ nav a {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.45);
+  z-index: 0;
 }
 
 .divider h2 {
@@ -115,7 +111,37 @@ nav a {
   background: white;
   padding: 10px;
   border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ================= PRICE SHEET ================= */
+.price-sheet {
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.price-sheet .sheet {
+  background: white;
+  padding: 50px 40px;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.price-sheet h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.price-sheet .package {
+  font-size: 20px;
+  line-height: 2;
+  margin-bottom: 15px;
 }
 
 /* ================= CONTACT ================= */
@@ -147,54 +173,33 @@ nav a {
   border-bottom: none;
 }
 
-/* ================= PRICE SHEET ================= */
-.price-sheet {
-  background-size: cover;
-  background-position: center;
-  padding: 80px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.price-sheet .sheet {
-  background: white;
-  padding: 50px 40px;
-  max-width: 800px;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.price-sheet h2 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.price-sheet .package {
-  background: #fdfdfd;
-  padding: 20px 25px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  font-size: 20px;
-  line-height: 1.6;
-  border-left: 4px solid #222;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.price-sheet .package:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
 /* ================= FOOTER ================= */
 footer {
   text-align: center;
   padding: 20px;
   background: black;
   color: white;
+}
+
+/* ================= AOS DEFAULTS ================= */
+/* Optional: smooth fade and spacing */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+/* Extra spacing for sections when appearing */
+.about[data-aos],
+.gallery[data-aos],
+.price-sheet .sheet[data-aos],
+.contact[data-aos] {
+  transform: translateY(20px);
+}
+
+[data-aos].aos-animate {
+  transform: translateY(0);
 }
