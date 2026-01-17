@@ -323,3 +323,16 @@ footer {
   animation: arkFadeUp 0.9s ease-out forwards;
 }
 
+.kontakt-ark label,
+.kontakt-ark input,
+.kontakt-ark textarea,
+.kontakt-ark button {
+  animation: arkFadeUp 0.9s ease-out forwards;
+  opacity: 0;
+}
+
+.kontakt-ark label { animation-delay: 0.1s; }
+.kontakt-ark input { animation-delay: 0.2s; }
+.kontakt-ark textarea { animation-delay: 0.3s; }
+.kontakt-ark button { animation-delay: 0.4s; }
+
