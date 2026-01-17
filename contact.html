@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <title>Kontakt – MTHS Media</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
-<!-- TOP HERO (same on all pages) -->
-<header class="hero" style="background-image: url('images/hero.JPG');">
+<!-- TOP HERO -->
+<header class="hero" style="background-image: url('images/hero.PNG');">
   <h1>Kontakt oss</h1>
   <p>Ta kontakt for samarbeid eller spørsmål</p>
 </header>
@@ -21,7 +22,7 @@
 </nav>
 
 <!-- CONTACT SECTION -->
-<section class="contact">
+<section class="contact" data-aos="fade-up">
   <h2>Kontaktinformasjon</h2>
   <ul class="contact-list">
     <li>E-post: mhtsmedia@gmail.com</li>
@@ -34,6 +35,14 @@
 <footer>
   <p>© 2026 MTHS Media</p>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
 
 </body>
 </html>
