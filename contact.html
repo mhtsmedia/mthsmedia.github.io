@@ -22,36 +22,33 @@
 </nav>
 
 <!-- CONTACT SECTION -->
-<section class="contact" data-aos="fade-up">
-  <h2>Kontaktinformasjon</h2>
-  <ul class="contact-list">
-    <li data-aos="fade-up" data-aos-delay="100">E-post: mhtsmedia@gmail.com</li>
-    <li data-aos="fade-up" data-aos-delay="200">Telefon: +47 940 35 180</li>
-    <li data-aos="fade-up" data-aos-delay="300">Adresse: Solkroken 17, 1394 Nesbru</li>
-  </ul>
-</section>
-
 <section class="kontakt-wrapper">
-  <div class="kontakt-ark">
+  <div class="kontakt-ark" data-aos="fade-up">
     <h2>Kontakt oss</h2>
 
-    <form>
+    <!-- Contact info list -->
+    <ul class="contact-list">
+      <li data-aos="fade-up" data-aos-delay="100"><strong>E-post:</strong> mhtsmedia@gmail.com</li>
+      <li data-aos="fade-up" data-aos-delay="200"><strong>Telefon:</strong> +47 940 35 180</li>
+      <li data-aos="fade-up" data-aos-delay="300"><strong>Adresse:</strong> Solkroken 17, 1394 Nesbru</li>
+    </ul>
+
+    <!-- Formspree contact form -->
+    <form action="https://formspree.io/f/xgoooqee" method="POST">
       <label for="email">E-post</label>
-      <input type="email" id="email" placeholder="Skriv e-posten din" required>
+      <input type="email" id="email" name="email" placeholder="Skriv e-posten din" required>
 
-      <label for="sted">Sted</label>
-      <input type="text" id="sted" placeholder="Hvor holder du til?">
+      <label for="location">Sted</label>
+      <input type="text" id="location" name="location" placeholder="Hvor holder du til?">
 
-      <label for="melding">Hva trenger du hjelp med?</label>
-      <textarea id="melding" rows="6" placeholder="Skriv hva du trenger hjelp med her..."></textarea>
+      <label for="message">Hva trenger du hjelp med?</label>
+      <textarea id="message" name="message" rows="6" placeholder="Skriv hva du trenger hjelp med her..."></textarea>
 
       <button type="submit">Send melding</button>
     </form>
   </div>
 </section>
 
-
-  
 <!-- FOOTER -->
 <footer>
   <p>© 2026 MTHS Media</p>
