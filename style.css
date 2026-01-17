@@ -6,7 +6,9 @@ body {
 }
 
 /* Hero section */
+/* Hero section */
 .hero {
+  position: relative;
   background-image: url("images/hero.JPG");
   background-size: cover;
   background-position: center;
@@ -16,6 +18,28 @@ body {
   text-align: center;
   padding: 120px 20px;
 }
+
+/* dark overlay so text is readable */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+/* keep text above overlay */
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
 
 /* dark overlay so text is readable */
 .hero::before {
@@ -38,7 +62,7 @@ body {
   z-index: 1;
 }
 
-}
+
 
 .hero h1 {
   font-size: 48px;
