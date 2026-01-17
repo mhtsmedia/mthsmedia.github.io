@@ -305,3 +305,21 @@ footer {
 .kontakt-ark button:hover {
   background-color: #333;
 }
+
+/* Fade + slide inn */
+@keyframes arkFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bruk animasjonen */
+.kontakt-ark {
+  animation: arkFadeUp 0.9s ease-out forwards;
+}
+
