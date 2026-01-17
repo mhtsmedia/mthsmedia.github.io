@@ -5,30 +5,25 @@ body {
   background: #f4f4f4;
 }
 
-/* Hero section */
-/* Hero section */
+/* ================= HERO ================= */
 .hero {
   position: relative;
   background-image: url("images/hero.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   color: white;
   text-align: center;
   padding: 120px 20px;
 }
 
-/* dark overlay so text is readable */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
-  z-index: 0;
 }
 
-/* keep text above overlay */
 .hero h1,
 .hero p {
   position: relative;
@@ -40,36 +35,7 @@ body {
   margin-bottom: 10px;
 }
 
-
-/* dark overlay so text is readable */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.45);
-}
-
-.hero {
-  position: relative;
-}
-
-.hero h1,
-.hero p {
-  position: relative;
-  z-index: 1;
-}
-
-
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-/* Navigation */
+/* ================= NAV ================= */
 nav {
   background: white;
   text-align: center;
@@ -83,31 +49,7 @@ nav a {
   font-weight: bold;
 }
 
-/* Gallery */
-/* Gallery */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  padding: 40px 20px;
-  background: #f4f4f4;
-}
-
-/* White card around each image */
-.gallery img {
-  width: 100%;
-  height: 260px;
-
-  object-fit: cover;
-
-  background: white;
-  padding: 10px;
-
-  border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* About section */
+/* ================= ABOUT ================= */
 .about {
   padding: 40px 20px;
   text-align: center;
@@ -118,19 +60,17 @@ nav a {
   font-size: 32px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: black;
-  color: white;
+.about p {
+  max-width: 800px;
+  margin: 15px auto;
+  line-height: 1.6;
 }
 
-/* Divider section */
+/* ================= DIVIDER ================= */
 .divider {
   position: relative;
   height: 300px;
-  background-image: url("images/hero2.JPG")
+  background-image: url("images/hero2.JPG");
   background-size: cover;
   background-position: center;
 
@@ -153,10 +93,33 @@ footer {
   letter-spacing: 2px;
   z-index: 1;
 }
-/* About text spacing */
-.about p {
-  max-width: 800px;
-  margin: 15px auto;
-  line-height: 1.6;
+
+/* ================= GALLERY ================= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  background: #f4f4f4;
 }
 
+/* White card + cropped images */
+.gallery img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+  color: white;
+}
