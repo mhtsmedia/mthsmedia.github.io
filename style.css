@@ -1,9 +1,17 @@
- /* ================= GENERAL ================= */
+/* ================= GENERAL ================= */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #222;
   background: #f4f4f4;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /* ================= HERO ================= */
@@ -21,7 +29,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45); /* dark overlay */
+  background: rgba(0,0,0,0.45);
   z-index: 0;
 }
 
@@ -41,6 +49,10 @@ nav {
   background: white;
   text-align: center;
   padding: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 nav a {
@@ -102,16 +114,6 @@ nav a {
   gap: 30px;
   padding: 40px 20px;
   background: #f4f4f4;
-}
-
-.gallery img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  background: white;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* ================= PRICE SHEET ================= */
@@ -182,7 +184,6 @@ footer {
 }
 
 /* ================= AOS DEFAULTS ================= */
-/* Optional: smooth fade and spacing */
 [data-aos] {
   opacity: 0;
   transition-property: transform, opacity;
@@ -192,7 +193,6 @@ footer {
   opacity: 1;
 }
 
-/* Extra spacing for sections when appearing */
 .about[data-aos],
 .gallery[data-aos],
 .price-sheet .sheet[data-aos],
@@ -204,13 +204,13 @@ footer {
   transform: translateY(0);
 }
 
+/* ================= CONTACT FORM ================= */
 .kontakt {
   max-width: 400px;
   margin: 20px auto;
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  font-family: Arial, sans-serif;
 }
 
 .kontakt h2 {
@@ -243,7 +243,7 @@ footer {
   font-size: 16px;
 }
 
-/* Bakgrunn med hero2 */
+/* ================= CONTACT WRAPPER ================= */
 .kontakt-wrapper {
   min-height: 100vh;
   background-image: url("images/hero4.JPG");
@@ -255,24 +255,21 @@ footer {
   align-items: flex-start;
 }
 
-/* Hvitt A4-ark */
 .kontakt-ark {
   background: white;
   width: 100%;
-  max-width: 800px; /* A4-følelse */
+  max-width: 800px;
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-  font-family: Arial, sans-serif;
 }
 
-/* Tittel */
+/* Skjema inni ark */
 .kontakt-ark h2 {
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* Skjema */
 .kontakt-ark label {
   display: block;
   margin-top: 20px;
@@ -289,7 +286,6 @@ footer {
   font-size: 15px;
 }
 
-/* Knapp */
 .kontakt-ark button {
   margin-top: 30px;
   width: 100%;
@@ -306,23 +302,13 @@ footer {
   background-color: #333;
 }
 
-/* Fade + slide inn */
+/* ================= ANIMATIONS ================= */
 @keyframes arkFadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Bruk animasjonen */
-.kontakt-ark {
-  animation: arkFadeUp 0.9s ease-out forwards;
-}
-
+.kontakt-ark,
 .kontakt-ark label,
 .kontakt-ark input,
 .kontakt-ark textarea,
@@ -335,3 +321,30 @@ footer {
 .kontakt-ark input { animation-delay: 0.2s; }
 .kontakt-ark textarea { animation-delay: 0.3s; }
 .kontakt-ark button { animation-delay: 0.4s; }
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero { padding: 60px 15px; }
+  .hero h1 { font-size: 32px; }
+  .hero p { font-size: 18px; }
+
+  .about h2 { font-size: 24px; }
+  .about p { font-size: 16px; line-height: 1.5; }
+
+  .divider h2 { font-size: 28px; }
+
+  .price-sheet .sheet,
+  .kontakt-ark {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .price-sheet .package { font-size: 18px; }
+  .contact-list li { font-size: 16px; }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
