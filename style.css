@@ -348,3 +348,14 @@ footer {
     gap: 10px;
   }
 }
+
+/* ================= Bilbilder ================= */
+.car-gallery {
+  margin-top: 80px; /* Luft mellom drone- og bilbilder */
+}
+
+.car-gallery img {
+  max-width: 350px; /* Passe bredde for vertikale bilbilder */
+  height: auto;
+  margin: 10px; /* Luft mellom bilbildene */
+}
