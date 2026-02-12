@@ -368,3 +368,14 @@ footer {
   color: #222;
   padding: 0 20px;       /* Luft på sidene på små skjermer */
 }
+
+/* ================= Privatpersoner ================= */
+.private-photo-info {
+  max-width: 900px;      /* Samme bredde som bedrift */
+  margin: 50px auto;     /* Luft over og under */
+  font-family: Arial, sans-serif;
+  line-height: 1.7;      /* God lesbarhet */
+  color: #222;
+  padding: 0 20px;       /* Luft på små skjermer */
+}
+
