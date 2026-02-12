@@ -359,3 +359,12 @@ footer {
   height: auto;
   margin: 10px; /* Luft mellom bilbildene */
 }
+
+.business-photo-info {
+  max-width: 900px;      /* Begrens bredde for bedre lesbarhet */
+  margin: 50px auto;     /* Litt luft over og under */
+  font-family: Arial, sans-serif;
+  line-height: 1.7;      /* Litt mer luft mellom linjene */
+  color: #222;
+  padding: 0 20px;       /* Luft på sidene på små skjermer */
+}
