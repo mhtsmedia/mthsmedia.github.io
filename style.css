@@ -7,11 +7,11 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 /* ================= HERO ================= */
@@ -30,7 +30,6 @@ img {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.45);
-  z-index: 0;
 }
 
 .hero h1,
@@ -47,7 +46,6 @@ img {
 /* ================= NAVIGATION ================= */
 nav {
   background: white;
-  text-align: center;
   padding: 15px;
   display: flex;
   justify-content: center;
@@ -56,7 +54,6 @@ nav {
 }
 
 nav a {
-  margin: 0 15px;
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -64,7 +61,7 @@ nav a {
 
 /* ================= ABOUT ================= */
 .about {
-  padding: 40px 20px;
+  padding: 60px 20px;
   text-align: center;
   background: white;
 }
@@ -96,7 +93,6 @@ nav a {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.45);
-  z-index: 0;
 }
 
 .divider h2 {
@@ -107,13 +103,18 @@ nav a {
   z-index: 1;
 }
 
-/* ================= GALLERY ================= */
+/* ================= GALLERY (Drone + Bil) ================= */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  padding: 40px 20px;
-  background: #f4f4f4;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  padding: 60px 20px;
+}
+
+/* Luft mellom drone og bil seksjon */
+.car-gallery {
+  margin-top: 120px;
+  gap: 45px; /* Ekstra luft mellom bilbildene */
 }
 
 /* ================= PRICE SHEET ================= */
@@ -130,7 +131,7 @@ nav a {
   padding: 50px 40px;
   max-width: 800px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 20px 50px rgba(0,0,0,0.2);
 }
 
@@ -146,10 +147,19 @@ nav a {
   margin-bottom: 15px;
 }
 
+/* ================= INFO SECTIONS ================= */
+.business-photo-info,
+.private-photo-info {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+  line-height: 1.7;
+}
+
 /* ================= CONTACT ================= */
 .contact {
   background: white;
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -161,8 +171,8 @@ nav a {
 .contact-list {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
   max-width: 400px;
+  margin: 0 auto;
 }
 
 .contact-list li {
@@ -175,81 +185,13 @@ nav a {
   border-bottom: none;
 }
 
-/* ================= FOOTER ================= */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: black;
-  color: white;
-}
-
-/* ================= AOS DEFAULTS ================= */
-[data-aos] {
-  opacity: 0;
-  transition-property: transform, opacity;
-}
-
-[data-aos].aos-animate {
-  opacity: 1;
-}
-
-.about[data-aos],
-.gallery[data-aos],
-.price-sheet .sheet[data-aos],
-.contact[data-aos] {
-  transform: translateY(20px);
-}
-
-[data-aos].aos-animate {
-  transform: translateY(0);
-}
-
-/* ================= CONTACT FORM ================= */
-.kontakt {
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-}
-
-.kontakt h2 {
-  text-align: center;
-}
-
-.kontakt label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-.kontakt input,
-.kontakt textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid #aaa;
-}
-
-.kontakt button {
-  margin-top: 15px;
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: white;
-  font-size: 16px;
-}
-
-/* ================= CONTACT WRAPPER ================= */
+/* ================= CONTACT PAGE ================= */
 .kontakt-wrapper {
   min-height: 100vh;
   background-image: url("images/hero4.JPG");
   background-size: cover;
   background-position: center;
-  padding: 40px 15px;
+  padding: 60px 15px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -259,12 +201,11 @@ footer {
   background: white;
   width: 100%;
   max-width: 800px;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
 }
 
-/* Skjema inni ark */
 .kontakt-ark h2 {
   text-align: center;
   margin-bottom: 30px;
@@ -296,86 +237,47 @@ footer {
   color: white;
   font-size: 16px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .kontakt-ark button:hover {
   background-color: #333;
 }
 
-/* ================= ANIMATIONS ================= */
-@keyframes arkFadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: black;
+  color: white;
 }
 
-.kontakt-ark,
-.kontakt-ark label,
-.kontakt-ark input,
-.kontakt-ark textarea,
-.kontakt-ark button {
-  animation: arkFadeUp 0.9s ease-out forwards;
-  opacity: 0;
-}
-
-.kontakt-ark label { animation-delay: 0.1s; }
-.kontakt-ark input { animation-delay: 0.2s; }
-.kontakt-ark textarea { animation-delay: 0.3s; }
-.kontakt-ark button { animation-delay: 0.4s; }
-
-/* ================= MOBILE RESPONSIVE ================= */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  .hero { padding: 60px 15px; }
-  .hero h1 { font-size: 32px; }
-  .hero p { font-size: 18px; }
 
-  .about h2 { font-size: 24px; }
-  .about p { font-size: 16px; line-height: 1.5; }
-
-  .divider h2 { font-size: 28px; }
-
-  .price-sheet .sheet,
-  .kontakt-ark {
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
+  .hero {
+    padding: 70px 15px;
   }
 
-  .price-sheet .package { font-size: 18px; }
-  .contact-list li { font-size: 16px; }
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .car-gallery {
+    margin-top: 80px;
+  }
+
+  .kontakt-ark {
+    padding: 25px;
+  }
 
   nav {
     flex-direction: column;
     gap: 10px;
   }
 }
-
-/* ================= Bilbilder ================= */
-.car-gallery {
-  margin-top: 80px; /* Luft mellom drone- og bilbilder */
-}
-
-.car-gallery img {
-  max-width: 350px; /* Passe bredde for vertikale bilbilder */
-  height: auto;
-  margin: 10px; /* Luft mellom bilbildene */
-}
-
-.business-photo-info {
-  max-width: 900px;      /* Begrens bredde for bedre lesbarhet */
-  margin: 50px auto;     /* Litt luft over og under */
-  font-family: Arial, sans-serif;
-  line-height: 1.7;      /* Litt mer luft mellom linjene */
-  color: #222;
-  padding: 0 20px;       /* Luft på sidene på små skjermer */
-}
-
-/* ================= Privatpersoner ================= */
-.private-photo-info {
-  max-width: 900px;      /* Samme bredde som bedrift */
-  margin: 50px auto;     /* Luft over og under */
-  font-family: Arial, sans-serif;
-  line-height: 1.7;      /* God lesbarhet */
-  color: #222;
-  padding: 0 20px;       /* Luft på små skjermer */
-}
-
